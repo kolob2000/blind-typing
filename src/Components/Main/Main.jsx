@@ -1,7 +1,8 @@
-import {Row} from "react-bootstrap";
+import {Container, Row} from "react-bootstrap";
 import styles from "./main.module.css"
-import {Canvas, Keyboard, Output} from "../Library";
+import {Canvas, Dashboard, Keyboard, Output, Result} from "../Library";
 import {useEffect, useState} from "react";
+import {Timer} from "../Library/Timer";
 
 export const Main = () => {
     const [text, setText] = useState('')
@@ -32,12 +33,17 @@ export const Main = () => {
         }
 
     }
-    return <Row className={"d-flex flex-column align-items-center " + styles['main-output']}>
-        <Output canvasList={[<Canvas key={"start"} position={"start"} text={text} height={100} index={count}/>,
-            <Canvas key={"center"} position={"center"} text={text} height={100} index={count}/>,
-            <Canvas key={"end"} position={"end"} text={text} height={100} index={count}/>]}/>
-        <Keyboard char={text[count]}/>
-    </Row>
+    return <Container className={"d-flex justify-content-center"}>
+        <Row className={"d-flex flex-column align-items-center " + styles['main-output']}>
+            <Dashboard/>
+            <Timer/>
+            <Output canvasList={[<Canvas key={"start"} position={"start"} text={text} height={100} index={count}/>,
+                <Canvas key={"center"} position={"center"} text={text} height={100} index={count}/>,
+                <Canvas key={"end"} position={"end"} text={text} height={100} index={count}/>]}/>
+            <Keyboard char={text[count]}/>
+        </Row>
+        {/*<Result/>*/}
+    </Container>
 
 };
 

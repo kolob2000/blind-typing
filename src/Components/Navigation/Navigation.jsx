@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 export const Navigation = () => <Navbar bg="success" variant="dark" expand="lg">
     <Container>
         <Navbar.Brand>BlindTP</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className={"mx-auto gap-3"}>
                 <NavLink to={'/'} className={"nav-link"}>Главная</NavLink>

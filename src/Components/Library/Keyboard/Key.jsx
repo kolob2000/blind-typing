@@ -1,7 +1,7 @@
 import styles from "./keyboard.module.css";
 import PropTypes from "prop-types";
 
-export const Button = ({text, char, className, isWord, isWin}) => {
+export const Key = ({text, char, className, isWord, isWin}) => {
     const isChar = (symbols, character) => {
         if (symbols?.toLowerCase().includes(character?.toLowerCase())) {
             return " " + styles.highlighted
@@ -26,7 +26,7 @@ export const Button = ({text, char, className, isWord, isWin}) => {
 };
 
 
-Button.propTypes = {
+Key.propTypes = {
     text: PropTypes.string,
     char: PropTypes.string,
     className: PropTypes.string,

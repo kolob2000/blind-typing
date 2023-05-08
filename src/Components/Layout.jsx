@@ -6,7 +6,7 @@ import {Container} from "react-bootstrap";
 export const Layout = () => (
     <>
         <Navigation/>
-        <Container className={"flex-grow-1 d-flex flex-column"}>
+        <Container className={"min-width flex-grow-1 d-flex flex-column"}>
             <Outlet/>
         </Container>
         <Footer/>

@@ -1,7 +1,7 @@
 import styles from './keyboard.module.css'
 import {Container, Row} from "react-bootstrap";
 import PropTypes from "prop-types";
-import {Button} from "./Button.jsx";
+import {Key} from "./Key.jsx";
 
 export const Keyboard = ({char}) => {
     const isShifted = (character) => {
@@ -96,46 +96,46 @@ export const Keyboard = ({char}) => {
 
     return <Container className={"w-auto d-flex flex-column flex-nowrap mt-5 " + styles.keyboard}>
         <Row className={"gx-0 flex-nowrap " + styles.keyboard__row}>
-            {rowOne.map(i => <Button text={i.text}
-                                     char={char}
-                                     className={i.className}
-                                     isWord={i.isWord}
-                                     isWin={i.isWin}
-                                     key={i.text}/>)}
+            {rowOne.map(i => <Key text={i.text}
+                                  char={char}
+                                  className={i.className}
+                                  isWord={i.isWord}
+                                  isWin={i.isWin}
+                                  key={i.text}/>)}
         </Row>
         <Row className={"gx-0 flex-nowrap " + styles.keyboard__row}>
-            {rowTwo.map(i => <Button text={i.text}
-                                     char={char}
-                                     className={i.className}
-                                     isWord={i.isWord}
-                                     isWin={i.isWin}
-                                     key={i.text}/>)}
+            {rowTwo.map(i => <Key text={i.text}
+                                  char={char}
+                                  className={i.className}
+                                  isWord={i.isWord}
+                                  isWin={i.isWin}
+                                  key={i.text}/>)}
 
         </Row>
         <Row className={"gx-0 flex-nowrap " + styles.keyboard__row}>
-            {rowThree.map(i => <Button text={i.text}
-                                       char={char}
-                                       className={i.className}
-                                       isWord={i.isWord}
-                                       isWin={i.isWin}
-                                       key={i.text}/>)}
+            {rowThree.map(i => <Key text={i.text}
+                                    char={char}
+                                    className={i.className}
+                                    isWord={i.isWord}
+                                    isWin={i.isWin}
+                                    key={i.text}/>)}
         </Row>
         <Row className={"gx-0 flex-nowrap " + styles.keyboard__row}>
-            {rowFour.map(i => <Button text={i.text}
-                                      char={char}
-                                      className={i.className}
-                                      isWord={i.isWord}
-                                      isWin={i.isWin}
-                                      key={i.text}/>)}
+            {rowFour.map(i => <Key text={i.text}
+                                   char={char}
+                                   className={i.className}
+                                   isWord={i.isWord}
+                                   isWin={i.isWin}
+                                   key={i.text}/>)}
         </Row>
         <Row className={"gx-0 flex-nowrap " + styles.keyboard__row}>
 
-            {rowFive.map(i => <Button text={i.text}
-                                      char={char}
-                                      className={i.className}
-                                      isWord={i.isWord}
-                                      isWin={i.isWin}
-                                      key={i.text}/>)}
+            {rowFive.map(i => <Key text={i.text}
+                                   char={char}
+                                   className={i.className}
+                                   isWord={i.isWord}
+                                   isWin={i.isWin}
+                                   key={i.text}/>)}
         </Row>
     </Container>
 }

@@ -11,3 +11,11 @@ body {
 canvas {
     display: block;
 }
+
+img {
+    display: block;
+}
+
+.min-width {
+    min-width: 1024px;
+}
