@@ -1,0 +1,14 @@
+.main-output{
+    padding: 1rem;
+}
+.text-output{
+    /*justify-content: center;*/
+    align-items: baseline;
+    font-size: 2rem;
+}
+.current-symbol{
+
+    background: rgba(0, 0, 0, 0.5);
+    color: red;
+    padding: 0 3px;
+}

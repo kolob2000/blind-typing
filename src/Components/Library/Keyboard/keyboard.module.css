@@ -1,0 +1,85 @@
+.keyboard {
+    color: #888888;
+    padding: 12px;
+    gap: 6px;
+    min-width: max-content;
+    border-radius: 24px;
+    background: linear-gradient(95.15deg, rgba(255, 255, 255, 0.3) 2.86%, rgba(255, 255, 255, 0) 30.59%, rgba(255, 255, 255, 0.3) 48.18%, rgba(255, 255, 255, 0.243) 64.3%, rgba(255, 255, 255, 0.3) 96.67%), #C4C4C4;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.keyboard__row {
+    gap: 6px;
+}
+
+.keyboard__button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 48px !important;
+    height: 48px !important;
+    background: #F1F1EF;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 0 2px rgba(0, 0, 0, 0.45), inset 0 2px 0 #FFFFFF;
+    border-radius: 4px;
+}
+
+.keyboard__button_lt {
+    border-top-left-radius: 16px;
+}
+
+
+.keyboard__button_delete {
+    width: 84px !important;
+    border-top-right-radius: 16px;
+
+}
+
+.keyboard__button_tab {
+    width: 84px !important;
+}
+
+.keyboard__button_capslock {
+    width: 96px !important;
+}
+
+.keyboard__button_enter {
+    width: 90px !important;
+}
+
+
+.keyboard__button_rshift, .keyboard__button_lshift {
+    width: 120px !important;
+}
+
+.keyboard__button_lctrl {
+    border-bottom-left-radius: 16px;
+    width: 102px !important;
+}
+
+.keyboard__button_rctrl {
+    width: 102px !important;
+    border-bottom-right-radius: 16px;
+
+}
+
+.keyboard__button_win {
+}
+
+.keyboard__button_space {
+    width: 252px !important;
+}
+
+.keyboard__button_lalt {
+    width: 72px !important;
+}
+
+.keyboard__button_ralt {
+    width: 72px !important;
+}
+
+.highlighted {
+    background: #dc3545;
+    color: #212529;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 0 2px rgba(0, 0, 0, 0.45), inset 0 2px 0 rgba(222, 186, 189, 0.29);
+}

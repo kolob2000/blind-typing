@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<style>
+    .keyboard {
+        color: #888888;
+        padding: 12px;
+        gap: 6px;
+        width: max-content;
+        border-radius: 24px;
+        background: linear-gradient(95.15deg, rgba(255, 255, 255, 0.3) 2.86%, rgba(255, 255, 255, 0) 30.59%, rgba(255, 255, 255, 0.3) 48.18%, rgba(255, 255, 255, 0.243) 64.3%, rgba(255, 255, 255, 0.3) 96.67%), #C4C4C4;
+    }
+
+    .keyboard__row {
+        gap: 6px;
+    }
+
+    .keyboard__button {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        background: #F1F1EF;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 0px 1.5px rgba(0, 0, 0, 0.45), inset 0px 1.5px 0px #FFFFFF;
+        border-radius: 4px;
+    }
+
+    .keyboard__button_lt {
+        border-top-left-radius: 16px;
+    }
+
+
+
+
+    .keyboard__button_delete {
+        width: 84px;
+        border-top-right-radius: 16px;
+
+    }
+
+    .keyboard__button_tab {
+        width: 84px;
+    }
+
+    .keyboard__button_capslock {
+        width: 96px;
+    }
+
+    .keyboard__button_enter {
+        width: 90px;
+    }
+
+
+    .keyboard__button_lshift {
+        width: 120px;
+    }
+
+    .keyboard__button_rshift {
+        width: 120px;
+    }
+
+    .keyboard__button_lctrl {
+        border-bottom-left-radius: 16px;
+        width: 102px;
+    }
+
+    .keyboard__button_rctrl {
+        width: 102px;
+                border-bottom-right-radius: 16px;
+
+    }
+
+    .keyboard__button_win {
+    }
+
+    .keyboard__button_space {
+        width: 252px;
+    }
+
+    .keyboard__button_lalt {
+        width: 72px;
+    }
+
+    .keyboard__button_ralt {
+        width: 72px;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="container-fluid keyboard d-flex  flex-column flex-nowrap ">
+        <div class="row gx-0  keyboard__row">
+            <div class=" keyboard__button keyboard__button_lt">` ~ ё</div>
+            <div class=" keyboard__button">!<br/>1</div>
+            <div class=" keyboard__button">@<br/>2&nbsp;&nbsp;"</div>
+            <div class=" keyboard__button">#<br/>3 №</div>
+            <div class=" keyboard__button">$<br/>4&nbsp;&nbsp;;</div>
+            <div class=" keyboard__button">%<br/>5</div>
+            <div class=" keyboard__button">^<br/>6&nbsp;&nbsp;:</div>
+            <div class=" keyboard__button">&<br/>7&nbsp;&nbsp;?</div>
+            <div class=" keyboard__button">*<br/>8</div>
+            <div class=" keyboard__button">(<br/>9</div>
+            <div class=" keyboard__button">)<br/>0</div>
+            <div class=" keyboard__button">_<br/>-</div>
+            <div class=" keyboard__button">+<br/>=</div>
+            <div class=" keyboard__button keyboard__button_delete">delete</div>
+        </div>
+        <div class="row gx-0  keyboard__row">
+            <div class="keyboard__button keyboard__button_tab">tab</div>
+            <div class="keyboard__button">Q<br/>Й</div>
+            <div class="keyboard__button">W<br/>Ц</div>
+            <div class="keyboard__button">E<br/>У</div>
+            <div class="keyboard__button">R<br/>К</div>
+            <div class="keyboard__button">T<br/>Е</div>
+            <div class="keyboard__button">Y<br/>Н</div>
+            <div class="keyboard__button">U<br/>Г</div>
+            <div class="keyboard__button">I<br/>Ш</div>
+            <div class="keyboard__button">O<br/>Щ</div>
+            <div class="keyboard__button">P<br/>З</div>
+            <div class="keyboard__button">{`{`}<br/>[&nbsp;&nbsp;Х</div>
+            <div class="keyboard__button">{`}`}<br/>]&nbsp;&nbsp;Ъ</div>
+            <div class="keyboard__button">|<br/>\&nbsp;&nbsp;/</div>
+        </div>
+        <div class="row gx-0  keyboard__row">
+            <div class="keyboard__button keyboard__button_capslock">capslock</div>
+            <div class="keyboard__button">A<br/>Ф</div>
+            <div class="keyboard__button">S<br/>Ы</div>
+            <div class="keyboard__button">D<br/>В</div>
+            <div class="keyboard__button">F<br/>А</div>
+            <div class="keyboard__button">G<br/>П</div>
+            <div class="keyboard__button">H<br/>Р</div>
+            <div class="keyboard__button">J<br/>О</div>
+            <div class="keyboard__button">K<br/>Л</div>
+            <div class="keyboard__button">L<br/>Д</div>
+            <div class="keyboard__button">:<br/>;&nbsp;&nbsp;Ж</div>
+            <div class="keyboard__button">"<br/>'&nbsp;&nbsp;Э</div>
+            <div class="keyboard__button keyboard__button_enter">enter</div>
+        </div>
+        <div class="row gx-0  keyboard__row">
+            <div class="keyboard__button keyboard__button_lshift">shift</div>
+            <div class="keyboard__button">Z<br/>Я</div>
+            <div class="keyboard__button">X<br/>Ч</div>
+            <div class="keyboard__button">C<br/>С</div>
+            <div class="keyboard__button">V<br/>М</div>
+            <div class="keyboard__button">B<br/>И</div>
+            <div class="keyboard__button">N<br/>Т</div>
+            <div class="keyboard__button">M<br/>Ь</div>
+            <div class="keyboard__button"><<br/>,&nbsp;&nbsp;Б</div>
+            <div class="keyboard__button">><br/>.&nbsp;&nbsp;Ю</div>
+            <div class="keyboard__button">?<br/>/ . ,</div>
+            <div class="keyboard__button keyboard__button_rshift">shift</div>
+        </div>
+        <div class="row gx-0  keyboard__row">
+            <div class="keyboard__button keyboard__button_lctrl">ctrl</div>
+            <div class="keyboard__button"><img src="win.svg" alt="win"></div>
+            <div class="keyboard__button keyboard__button_lalt">alt</div>
+            <div class="keyboard__button keyboard__button_space"></div>
+            <div class="keyboard__button keyboard__button_ralt">alt</div>
+            <div class="keyboard__button">menu</div>
+            <div class="keyboard__button">fn</div>
+            <div class="keyboard__button keyboard__button_rctrl">ctrl</div>
+        </div>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+</html>
