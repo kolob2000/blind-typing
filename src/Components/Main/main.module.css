@@ -1,12 +1,15 @@
-.main-output{
+.main-output {
     padding: 1rem;
+    min-width: 845px;
 }
-.text-output{
+
+.text-output {
     /*justify-content: center;*/
     align-items: baseline;
     font-size: 2rem;
 }
-.current-symbol{
+
+.current-symbol {
 
     background: rgba(0, 0, 0, 0.5);
     color: red;

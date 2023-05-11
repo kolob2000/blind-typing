@@ -1,1 +1,1 @@
-export * from './timerSlice.js'
+export * from "./timerSlice.js";

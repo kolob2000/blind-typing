@@ -1,1 +1,1 @@
-export * from "./ErrorPage.jsx"
+export * from "./ErrorPage.jsx";

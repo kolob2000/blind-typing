@@ -1,3 +1,3 @@
-export * from './text'
-export * from './timer'
-export * from './dashboard'
+export * from "./text";
+export * from "./timer";
+export * from "./dashboard";

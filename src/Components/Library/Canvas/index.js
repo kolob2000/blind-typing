@@ -1,1 +1,1 @@
-export * from "./Canvas.jsx"
+export * from "./Canvas.jsx";

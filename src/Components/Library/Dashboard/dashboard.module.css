@@ -1,0 +1,9 @@
+.inactive {
+    filter: grayscale(100%);
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+.keyboard{
+    height: 25px;
+}
