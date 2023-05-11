@@ -5,10 +5,11 @@ import {
   fetchText,
   resetTimer,
   setLang,
-  toggleKeyboard,
+  toggleKeyboard, toggleSound,
 } from "../../../features/index.js";
 
 export const Dashboard = () => {
+  const sound = useSelector((state) => state.dashboard.sound);
   const lang = useSelector((state) => state.dashboard.lang);
   const typing = useSelector((state) => state.text.typing);
   const dispatch = useDispatch();
@@ -37,6 +38,18 @@ export const Dashboard = () => {
               src="keyboard.svg"
               alt="keyboard"
             />
+          </Button>
+        </Col>
+        <Col className={"w-auto col-1 p-0"}>
+          <Button
+            onClick={() => dispatch(toggleSound())}
+            className={
+              !sound
+                ? styles.inactive
+                : "" + " bg-transparent p-0 border-0"
+            }
+          >
+            <img src="sound.svg" alt="rus" />
           </Button>
         </Col>
         <Col className={"w-auto col-1 p-0"}>

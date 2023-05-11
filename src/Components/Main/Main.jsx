@@ -19,6 +19,8 @@ import {
 } from "../../features/index.js";
 
 export const Main = () => {
+  const audio = new Audio("no.mp3");
+  const sound = useSelector((state) => state.dashboard.sound);
   const pause = useSelector((state) => state.timer.pause);
   const seconds = useSelector((state) => state.timer.seconds);
   const minutes = useSelector((state) => state.timer.minutes);
@@ -35,7 +37,7 @@ export const Main = () => {
     return () => {
       window.removeEventListener("keydown", handleButton);
     };
-  }, [index, text, modal]);
+  }, [index, text, modal, sound]);
   const handleButton = (e) => {
     if (e.key === "Enter" && !typing) {
       if (!modal) {
@@ -59,6 +61,9 @@ export const Main = () => {
           dispatch(setModal(true));
           dispatch(resetTimer());
         }
+      } else if (e.key !== "Escape" && e.key !== "Shift" && sound) {
+        console.log("here");
+        audio.play();
       }
     }
     if (e.key === "Escape") {

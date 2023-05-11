@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   keyboard: true,
   lang: "ru",
+  sound: false,
 };
 const dashboardSlice = createSlice({
   name: "dashboard",
@@ -11,6 +12,9 @@ const dashboardSlice = createSlice({
     toggleKeyboard(state) {
       state.keyboard = !state.keyboard;
     },
+    toggleSound(state) {
+      state.sound = !state.sound;
+    },
     setLang(state, action) {
       if (state.lang !== action.payload) {
         state.lang = action.payload;
@@ -18,5 +22,5 @@ const dashboardSlice = createSlice({
     },
   },
 });
-export const { toggleKeyboard, setLang } = dashboardSlice.actions;
+export const { toggleKeyboard, setLang, toggleSound } = dashboardSlice.actions;
 export default dashboardSlice.reducer;
