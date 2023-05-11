@@ -33,6 +33,15 @@ export const Main = () => {
   const typing = useSelector((state) => state.text.typing);
   const dispatch = useDispatch();
   useEffect(() => {
+    if (minutes * 60 + seconds >= 120) {
+      dispatch(setTyping(false));
+      dispatch(setPause(true));
+      stopTyping();
+      dispatch(setModal(true));
+      dispatch(resetTimer());
+    }
+  }, [seconds]);
+  useEffect(() => {
     window.addEventListener("keydown", handleButton);
     return () => {
       window.removeEventListener("keydown", handleButton);
@@ -54,6 +63,7 @@ export const Main = () => {
       if (e.key === text[index] && index < text.length) {
         dispatch(incrementCorrectCount());
         dispatch(setIndex(index + 1));
+
         if (index + 1 >= text.length) {
           dispatch(setTyping(false));
           dispatch(setPause(true));
@@ -131,27 +141,3 @@ export const Main = () => {
     </Container>
   );
 };
-
-// export function stopTyping(
-//   dispatch,
-//   count,
-//   correctCount,
-//   minutes,
-//   seconds,
-//   textLength,
-//   index
-// ) {
-//   const times = minutes * 60 + seconds;
-//   if (times !== 0) {
-//     dispatch(setSpeed(Math.floor((index / times) * 60)));
-//   }
-//   if (count === correctCount) {
-//     dispatch(setCorrectness(100));
-//   } else {
-//     dispatch(
-//       setCorrectness(
-//         Math.floor((count - (count - correctCount)) / (count / 100))
-//       )
-//     );
-//   }
-// }
