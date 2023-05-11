@@ -34,7 +34,7 @@ export const Dashboard = () => {
           >
             <img
               className={styles.keyboard}
-              src="public/keyboard.svg"
+              src="keyboard.svg"
               alt="keyboard"
             />
           </Button>
@@ -48,7 +48,7 @@ export const Dashboard = () => {
                 : "" + " bg-transparent p-0 border-0"
             }
           >
-            <img src="public/russian.svg" alt="rus" />
+            <img src="russian.svg" alt="rus" />
           </Button>
         </Col>
         <Col className={"w-auto col-1 p-0 "}>
@@ -60,7 +60,7 @@ export const Dashboard = () => {
                 : "" + " bg-transparent p-0  border-0"
             }
           >
-            <img src="public/english.svg" alt="eng" />
+            <img src="english.svg" alt="eng" />
           </Button>
         </Col>
       </Row>
