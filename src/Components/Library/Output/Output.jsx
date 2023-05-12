@@ -4,6 +4,7 @@ import styles from "./output.module.css";
 import { useSelector } from "react-redux";
 
 export const Output = (props) => {
+  const pause = useSelector((state) => state.timer.pause);
   const loading = useSelector((state) => state.text.loading);
   const typing = useSelector((state) => state.text.typing);
   return (
@@ -15,15 +16,30 @@ export const Output = (props) => {
       >
         {!typing ? (
           <div
-            className={"d-flex justify-content-center align-items-center fs-2 " + styles.h80}
+            className={
+              "d-flex justify-content-center align-items-center fs-2 " +
+              styles.h80
+            }
           >
             Enter начать / Esc пауза{" "}
           </div>
         ) : loading ? (
           <div
-            className={"d-flex justify-content-center align-items-center fs-2 " + styles.h80}
+            className={
+              "d-flex justify-content-center align-items-center fs-2 " +
+              styles.h80
+            }
           >
             Loading...
+          </div>
+        ) : pause ? (
+          <div
+            className={
+              "d-flex justify-content-center align-items-center fs-2 " +
+              styles.h80
+            }
+          >
+            Пауза. Продолжить Enter.
           </div>
         ) : (
           props.canvasList

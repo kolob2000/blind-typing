@@ -46,7 +46,7 @@ export const Main = () => {
     return () => {
       window.removeEventListener("keydown", handleButton);
     };
-  }, [index, text, modal, sound]);
+  }, [index, text, modal, sound, pause]);
   const handleButton = (e) => {
     if (e.key === "Enter" && !typing) {
       if (!modal) {
@@ -55,6 +55,11 @@ export const Main = () => {
         dispatch(resetTimer());
         dispatch(resetIndication());
         dispatch(setPause(false));
+      }
+    } else if (e.key === "Enter" && typing && pause) {
+      dispatch(setPause(false));
+      if(modal){
+        dispatch(setModal(false));
       }
     }
 
