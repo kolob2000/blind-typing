@@ -33,7 +33,7 @@ export const Main = () => {
   const typing = useSelector((state) => state.text.typing);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (minutes * 60 + seconds >= 20) {
+    if (minutes * 60 + seconds >= 120) {
       dispatch(setTyping(false));
       dispatch(setPause(true));
       stopTyping();
