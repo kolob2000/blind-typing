@@ -5,7 +5,6 @@ import { Container } from "react-bootstrap";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setPause } from "../features/index.js";
-import styles from "./layout.module.css";
 
 export const Layout = () => {
   const location = useLocation();
@@ -14,12 +13,12 @@ export const Layout = () => {
     dispatch(setPause(true));
   }, [location.pathname]);
   return (
-    <div className={styles["min-width"]}>
+    <>
       <Navigation />
       <Container className={"min-width flex-grow-1 d-flex flex-column"}>
         <Outlet />
       </Container>
       <Footer />
-    </div>
+    </>
   );
 };
