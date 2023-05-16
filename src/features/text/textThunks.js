@@ -16,6 +16,8 @@ export const fetchText = createAsyncThunk(
         const res = await fetch(engUrl, {
           headers: {
             "X-Api-Key": "ymJXRHplv7cRFVT1kzjDIw==5QyiWxsDeg5kx94z",
+            //  забыл добавить комментарий - ключ в открытом в виде только для вас,
+            //  для проверки, так он должен быть в переменной среды.
             "Content-Type": "application/json",
           },
         });
